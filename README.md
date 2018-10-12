@@ -1,4 +1,4 @@
-Manual Para ExecuÁ„o dos Testes - Web e Api
+Manual Para Execu√ß√£o dos Testes - Web e Api
 
 
 Ferramentas
@@ -12,28 +12,27 @@ Tecnologias
 - RestAssured
 - Selenium
 - Junit
-- JavaFaker
 
 Rodar os Testes
 
-	PrÈ-Requisito: Atualizar o Projeto Api e Web antes de rodar os testes, para baixar as dependÍncias do maven
+	Pr√©-Requisito: Atualizar o Projeto Api e Web antes de rodar os testes, para baixar as depend√™ncias do maven
 	
 	- Dentro da IDE
-	- Clicar bot„o direto no projeto
-	- Selecionar opÁ„o "Maven"
-	- Selecionar opÁ„o "Update maven project"
+	- Clicar bot√£o direto no projeto
+	- Selecionar op√ß√£o "Maven"
+	- Selecionar op√ß√£o "Update maven project"
 	
-1 - OpÁ„o IDE(Eclipse, Netbeans ou IntelliJ)
+1 - Op√ß√£o IDE(Eclipse, Netbeans ou IntelliJ)
 
 	- Run -> JU Run Test
 	
-2 - OpÁ„o Maven
+2 - Op√ß√£o Maven
 
-	PrÈ Requisito 
+	Pr√© Requisito 
 	
-	- Maven Instalado na m·quina 
+	- Maven Instalado na m√°quina 
 	
-	-------------AplicaÁ„o Api--------------- 
+	-------------Aplica√ß√£o Api--------------- 
 	
 	Sistema Operacional Mac OSX
 	- Abrir Terminal
@@ -45,20 +44,15 @@ Rodar os Testes
 	- Entra dentro do projeto
 	- Executar o camando "mvn test"
 	
-	----------AplicaÁ„o Web----------------- 
+	----------Aplica√ß√£o Web----------------- 
 		
-	Sistema Operacional Mac OSX
-	- Abrir Terminal
-	- Entra dentro do projeto
-	- Executar o camando "mvn test"
-	
 	Sistema Operacional Windows
-	- PrÈ requisito
+	- Pr√© requisito
 	- Abrir as features no pacotes src/test/resources -> features -> 
 	- Retirar a tag -> @chrome
 	- Inserir em todas as features a tag -> @chrome_windows
-	- Ir atÈ o pacote config -> 
-	- Abrir classe hooks -> ir atÈ o metodo -> beforeScenarioChromeWindows
+	- Ir at√© o pacote config -> 
+	- Abrir classe hooks -> ir at√© o metodo -> beforeScenarioChromeWindows
 	- Atualizar o metodo initializeWebApplication para -> initializeWebApplication(Web.CHROME_WINDOWS);
 	- abrir cmd 
 	- Entra dentro do projeto
@@ -69,14 +63,29 @@ Rodar os Testes
 	- Dentro do projeto
 	- Pasta target -> surefire--reports -> cucumber.html -> index.html
 	
-	- clicar no "index.html" ou abrir com seu browser de preferÍncia
+	- clicar no "index.html" ou abrir com seu browser de prefer√™ncia
 	
-	obs: futuramente esse report, estar· no jenkins
+	obs: futuramente esse report, estar√° no jenkins
 	
-	------------Melhorias e sugest„o de usabilidade da aplicaÁ„o front-end-----------------
 	
-	- Campo Data deve ter 8 caracteres
-	- NavegaÁ„o de todos os menus deve ser na horizontal
-	- Campo "Selecione o cliente" deve ser um "input" para que o usu·rio possa inserir o cliente que deseja pesquisar
-	- Bot„o "limpar base" n„o deve existir. o usu·rio deve excluir apenas pela table pelo bot„o de "excluir"
+	------------Prints Web-------------------------------------------------
+	-dentros da pastas abaixo ficam os prints de acordo com o status do testes. 
+	-passed
+	-error
+	-failed
+	------------Observa√ß√£o Testes que est√£o Funcionando-----------------
+	
+	- Teste Api
+	- Cenario: CT001 - cadastrar produto no estoque - ok
+	- Cenario: CT002 - consultar estoques de produto - error
+	
+	*problemas com bugs api:
+	O cen√°rio CT001 est√° cadastrando produto com valores null e no retorno n√£o consegue serializar.
+	
+	- Testes Web
+	- Cadastrar Produto - Cenario: CT001 - cadastrar produto no estoque
+	- Deletar Produto - Cenario: CT004 - deletar produto no estoque
+	
+	*Problemas com Bugs web:
+	alguns testes foram criados bdd¬¥s por√©m n√£o est√£o rodando devido ao bugs, ou seja n√£o faz sentido automatizar algo que n√£o est√°         funcionando.
 	
