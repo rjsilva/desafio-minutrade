@@ -1,0 +1,132 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#language: pt"
+      },
+      {
+        "line": 2,
+        "value": "#Author: Ronaldo silva"
+      },
+      {
+        "line": 3,
+        "value": "#Version: 1.0"
+      },
+      {
+        "line": 4,
+        "value": "#Encoding: UTF-8"
+      }
+    ],
+    "line": 5,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3214900905,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenarioChrome()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "CT001 - consultar venda",
+        "description": "",
+        "id": "--consultar-venda;ct001---consultar-venda",
+        "after": [
+          {
+            "result": {
+              "duration": 140170184,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenarioWeb()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3693413605,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "que estou na pagina de login",
+            "match": {
+              "location": "LoginSteps.queEstouNaPaginaDeLogin()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 2924669579,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "insiro credenciais validas e clico no botao singin",
+            "match": {
+              "location": "LoginSteps.insiroCredenciaisValidasEClicoNoBotaoSingin()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1690321322,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "clico link QA em seguida seleciono link transacoes em seguida listar em transacoes",
+            "match": {
+              "location": "ConsultarVendasSteps.clicoLinkQAEmSeguidaSelecionoLinkTransacoesEmSeguidaListarEmTransacoes()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 89133773,
+              "error_message": "org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 1\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.11.0\u0027, revision: \u0027e59cfb3\u0027, time: \u00272018-03-11T20:26:55.152Z\u0027\nSystem info: host: \u0027192.168.0.103\u0027, ip: \u0027fe80:0:0:0:1016:dae4:6885:f035%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.12.6\u0027, java.version: \u00271.8.0_131\u0027\nDriver info: driver.version: unknown\n\tat org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:183)\n\tat br.com.conductor.funcionalidade.ConsultarVendasFuncionalidade.consultarVenda(ConsultarVendasFuncionalidade.java:32)\n\tat br.com.conductor.steps.ConsultarVendasSteps.selecionoUmClienteEmSeguidaClicoNoBotaoPesquisar(ConsultarVendasSteps.java:30)\n\tat ✽.Quando seleciono um cliente em seguida clico no botao pesquisar(features/consultar-venda/consultar-venda.feature:12)\n",
+              "status": "failed"
+            },
+            "line": 12,
+            "name": "seleciono um cliente em seguida clico no botao pesquisar",
+            "match": {
+              "location": "ConsultarVendasSteps.selecionoUmClienteEmSeguidaClicoNoBotaoPesquisar()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "devo visualizar os dados do cliente pesquisado",
+            "match": {
+              "location": "ConsultarVendasSteps.devoVisualizarOsDadosDoClientePesquisado()"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "line": 7,
+            "name": "@chrome"
+          },
+          {
+            "line": 7,
+            "name": "@CTCV001"
+          }
+        ]
+      }
+    ],
+    "name": "- consultar venda",
+    "description": "",
+    "id": "--consultar-venda",
+    "keyword": "Funcionalidade",
+    "uri": "features/consultar-venda/consultar-venda.feature"
+  }
+]
